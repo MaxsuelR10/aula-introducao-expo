@@ -6,9 +6,9 @@ const styles = StyleSheet.create(
         container: {
             flex:1,
             backgroundColor: '#ff0',
-            alignItems: 'center',
         },
         titulo: {
+            textAlign: 'center',
             fontSize:RFPercentage(5),
             fontFamily: 'Montserrat-Bold',
             fontWeight: 'bold',
@@ -16,15 +16,18 @@ const styles = StyleSheet.create(
         },
         txt: {
             fontSize:RFPercentage(2.5),
+            textAlign: 'center',
         },
-        txtaula: {
+        aula: {
+            textAlign:'center',
             fontSize:RFPercentage(3),
             color:'#0f9',
         },
-          txtoutro: {
+          outro: {
+            textAlign: 'left',
             fontSize:RFPercentage(3),
             color:'#f0f',
-            textAlign: 'left',
+            
         }
     }
 );
