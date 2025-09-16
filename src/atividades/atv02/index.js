@@ -4,7 +4,6 @@ import styles from './styles';
 
 import img from '../../../assets/002-1-react-native.png';
 
-import Mensagem from './mensagem';
 
 function Atividade02() {
     return(
