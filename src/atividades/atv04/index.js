@@ -16,7 +16,7 @@ export default function Exemplo04() {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.titulo}>Exemplo 4</Text>
+            <Text style={styles.titulo}>Atividade 4</Text>
 
             <Text style={styles.txt}>{texto}</Text>
 
