@@ -1,34 +1,40 @@
 import { StyleSheet } from 'react-native';
-import { RFPercentage} from "react-native-responsive-fontsize";
+import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
 
-const styles = StyleSheet.create(
-    {
-        container: {
-            backgroundColor: '#fff',
-            padding: 8,
-            flex: 1,
-            alignItems: 'center',
-            borderRadius: 20,
-        },
-        titulo: {
-            fontSize:RFPercentage(3),
-            color:'#EE82EE',
-            fontWeight: 'bold',
-            borderColor: '#EE82EE',
-            marginTop: 10,
-            marginBottom: 10,
-            padding:8,
-            width: '100%',
-            height:80,
-            textAlign:'center',
-            textAlignVertical:'center',
-            borderRadius:20,
-            borderWidth: 2,
-        },
-        imagem: {
-            width: '80%',
-            resizeMode:'contain',
-        },
-    }
-);
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: 'deepskyblue',
+        borderRadius: RFPercentage(0.6),
+        width: '90%',
+        padding: 8,
+        alignItems: 'center',
+        borderRadius: 20,
+        marginBottom: RFPercentage(1),
+        flexDirection: 'row',
+    },
+    titulo: {
+        fontSize: RFPercentage(3),
+        color: '#121212',
+        fontWeight: 'bold',
+        marginBottom: RFPercentage(1),
+    },
+    texto: {
+        fontSize: RFPercentage(2.2),
+        color: '#fafafa',
+        
+    },
+     containerImagem:{
+        width: '30%',
+        
+     },
+     containerTexto:{
+        width: '70%',        
+     },
+     imagem: {
+        height: RFPercentage(10),
+        width: RFPercentage(10),
+        resizeMode: 'stretch',
+    },
+});
+
 export default styles;

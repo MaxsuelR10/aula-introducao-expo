@@ -1,22 +1,29 @@
-import { View, Text, Image} from 'react-native';
+import { View, Text, Image } from 'react-native';
 
 import styles from './styles';
 
-import img from '../../../assets/002-1-react-native.png';
+import { Children } from 'react';
 
-import Mensagem from './mensagem';
-
-function Exemplo02() {
-    return(
+function Card({ nome, descricao, valor, imagem }) {
+    return (
         <View style={styles.container}>
-            <Text style={styles.titulo}>Exemplo 2</Text>
-            <Image source={img} style={styles.imagem}/>
 
-            <Mensagem titulo={'ERRO'}>Você não clicou corretamente!</Mensagem>
-            <Mensagem titulo={'SUCESSO'}>Acesso permitido</Mensagem>
-            <Mensagem titulo={'AVISO'}>O tempo acabou</Mensagem>
+            <View style={styles.containerImagem}>
+                <Image source={imagem} style={styles.imagem} />
+            </View>
+            
+
+            <View style={styles.containerTexto}>
+                <Text style={styles.titulo}>{nome}</Text>
+                <Text style={styles.texto}>{descricao}</Text>
+                <Text style={styles.titulo}>{valor}</Text>
+            </View>
+
+
+            
         </View>
     );
 }
 
-export default Exemplo02;
+export default Card;
+

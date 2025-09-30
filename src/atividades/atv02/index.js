@@ -1,20 +1,52 @@
-import { View, Text, Image} from 'react-native';
+import { View, Text, Image } from 'react-native';
 
 import styles from './styles';
 
-import img from '../../../assets/002-1-react-native.png';
+import img1 from '../../../assets/sp1.jpg';
+import img2 from '../../../assets/sp2.jpg';
+import img3 from '../../../assets/sp3.jpg';
+import img4 from '../../../assets/sp4.jpg';
 
+import Card from './card';
 
 function Atividade02() {
     return(
-        <View style={styles.container}>
-            <Text style={styles.titulo}>Atividade 2</Text>
-            <Image source={img} style={styles.imagem}/>
+        
+         <View style={styles.container}>
+            <Text style={styles.titulo}>Atividade 02</Text>
+            
+            <Card 
+                imagem={img1}
+                nome={'Camiseta Branca'}
+                descricao={'Camiseta 1 Tradicional'}
+                valor={'R$ 500,00'}
+            />        
 
-            <Mensagem titulo={''}>Você não clicou corretamente!</Mensagem>
-            <Mensagem titulo={''}>Acesso permitido</Mensagem>
-            <Mensagem titulo={''}>O tempo acabou</Mensagem>
+            <Card 
+                imagem={img2}
+                nome={'Vermelha Preta e Branca'}
+                descricao={'Camiseta 1 Tradicional'}
+                valor={'R$ 400,00'}
+            />                  
+
+            <Card 
+                imagem={img3}
+                nome={'Camiseta Preta com Vermelho'}
+                descricao={'Camiseta 1 Tradicional'}
+                valor={'R$ 350,00'}
+            />                  
+
+            <Card 
+                imagem={img4}
+                nome={'Camiseta Azul Especial'}
+                descricao={'Camiseta 1 Tradicional'}
+                valor={'R$ 380,00'}
+            />                               
+        
         </View>
+       
+        
+       
     );
 }
 
