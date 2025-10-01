@@ -1,53 +1,76 @@
 import { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
-
 import styles from './styles';
 
-export default function Exemplo04() {
+export default function Exemplo05() {
+    const [n1, setN1] = useState(0);
+    const [n2, setN2] = useState(0);
+    const [total, setTotal] = useState(0);
 
-    const [texto, setTexto] = useState('');
-    const [txt2, setTxt2] = useState('');
-    const [mensagem, setMensagem] = useState('');
+    function Soma() {
+        setTotal(parseInt(n1) + parseInt(n2));
+    }
 
-    function handleExibeMensagem(){
-        setMensagem(txt2)
-        setTxt2('');
+    function Sub() {
+        setTotal(parseInt(n1) - parseInt(n2));
+    }
+
+    function Div() {
+        setTotal(parseInt(n1) / parseInt(n2));
+    }
+
+    function Mult() {
+        setTotal(parseInt(n1) * parseInt(n2));
     }
 
     return (
         <View style={styles.container}>
-            <Text style={styles.titulo}>Atividade 4</Text>
+            <Text style={styles.paragraph}>Atividade 5</Text>
+            <Text style={styles.txtSaida}>Calculadora básica funcional</Text>
 
-            <Text style={styles.txt}>{texto}</Text>
-
+            <Text style={styles.textLabel}>1º número</Text>
             <TextInput
-                onChangeText={setTexto}
-                placeholder='texto de fundo'
-                keyboardType='ascii-capable'
-                //editable={false}
-                // multiline
-                //numberOfLines={4}
-                maxLength={7}
-                // seucureTextEntry
-                style={styles.input}
+                style={styles.txtEntrada}
+                onChangeText={(entrada) => setN1(entrada)}
+                value={n1.toString()}
+                keyboardType="numeric"
             />
 
-            <Text style={styles.txt}>{mensagem}</Text>
+            <Text style={styles.txtSaida}> + </Text>
+
+            <Text style={styles.textLabel}>2º número</Text>
             <TextInput
-                value={txt2}
-                onChangeText={setTxt2}
-                placeholder='digite sua mensagem'
-                keyboardType='ascii-capable'
-                style={styles.input}
+                style={styles.txtEntrada}
+                onChangeText={(entrada) => setN2(entrada)}
+                value={n2.toString()}
+                keyboardType="numeric"
             />
 
-            <TouchableOpacity
-            style={styles.botao}
-            onPress={()=>handleExibeMensagem()}
-            >
-                <Text style={styles.txtBotao}>Exibir texto</Text>
+            <Text style={[styles.txtSaida, { margin: 0 }]}> = </Text>
+
+            <Text style={styles.textLabel}>Total</Text>
+            <Text style={styles.txtEntrada}>{total}</Text>
+
+            <View style={styles.butoes}>
+            <TouchableOpacity style={styles.button} onPress={Soma}>
+                <Text style={styles.txtButton}> + </Text>
             </TouchableOpacity>
 
+            <TouchableOpacity style={styles.button} onPress={Sub}>
+                <Text style={styles.txtButton}> - </Text>
+            </TouchableOpacity> 
+
+            <TouchableOpacity style={styles.button} onPress={Div}>
+                <Text style={styles.txtButton}> / </Text>
+            </TouchableOpacity> 
+
+            <TouchableOpacity style={styles.button} onPress={Mult}>
+                <Text style={styles.txtButton}> * </Text>
+                
+            </TouchableOpacity> 
+            </View>
+
         </View>
+
     );
 }

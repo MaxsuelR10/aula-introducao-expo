@@ -22,7 +22,7 @@ import Exemplo05  from './src/exemplos/ex05';
 export default function App() {
   return (
     <View style={styles.container}>
-       <Exemplo05/>
+       <Atividade5/>
     </View>
   );
 }

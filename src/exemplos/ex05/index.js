@@ -7,7 +7,7 @@ export default function Exemplo05() {
     const [total, setTotal] = useState(0);
 
     function Soma() {
-        setTotal(n1 + n2);
+        setTotal(parseInt(n1) + parseInt(n2));
     }
 
     return(
@@ -32,9 +32,7 @@ export default function Exemplo05() {
             <Text style={[styles.txtSaida, {margin: 0}]}> = </Text>
 
             <Text style={styles.textLabel}> Total </Text>
-            <TextInput style={styles.txtEntrada}
-            editable={false}
-            value={total} />
+            <Text style={styles.txtEntrada}></Text>
 
             <TouchableOpacity style={ styles.button} onPress={() => Soma()}>
                 <Text style={styles.txtButton}> + </Text>
@@ -47,7 +45,7 @@ export default function Exemplo05() {
         container: {
             flex: 1,
             justifyContent: 'center',
-            backgroundColor: '#FF80AB',
+            backgroundColor: '#fff',
             padding: 8,
         },
         paragraph: {
@@ -67,7 +65,7 @@ export default function Exemplo05() {
         txtEntrada: {
             borderWidth: 4,
             textAlign: 'center',
-            fontSize: 22,
+            fontSize: 10,
             borderColor: '#E91E63',
             height: 40,
             color: '#E53935',

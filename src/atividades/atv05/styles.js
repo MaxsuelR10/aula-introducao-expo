@@ -1,45 +1,62 @@
 import { StyleSheet } from 'react-native';
-import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 
-const styles = StyleSheet.create(
-    {
-        container: {
-            flex: 1,
-            backgroundColor: '#ff6',
-            alignItems: 'center',
-        },
-        titulo: {
-            fontSize: RFPercentage(5),
-            fontWeight: 'bold',
-            color: 'darkslategrey',
-            margin: RFPercentage(5),
-        },
-        txt: {
-            fontSize: RFPercentage(2.5),
-        },
-        input: {
-            borderWidth: RFPercentage(0.5),
-            borderColor: 'darkslategrey',
-            width: '80%',
-            borderRadius: RFPercentage(1.5),
-            padding: RFPercentage(1.5),
-            fontSize: RFPercentage(2),
-            textAlign: 'center',
-        },
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        backgroundColor: '#007791 ',
+        padding: 8,
+    },
+    paragraph: {
+        margin: 6,
+        fontSize: 18,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        color: '#318CE7',
+    },
+    txtSaida: {
+        margin: 6,
+        fontSize: 22,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        color: '#318CE7',
+    },
+    txtEntrada: {
+        borderWidth: 4,
+        textAlign: 'center',
+        fontSize: 20,
+        borderColor: '#002D62',
+        height: 50,
+        color: '#0AFFFF',
+        borderRadius: 10,
+        marginTop: 10,
+    },
+    button: {
+        backgroundColor: '#0000FF',
+        height: 40,
+        justifyContent: 'center',
+        borderRadius: 10,
+        marginTop: 20,
+        width: 60,
+    },
+    txtButton: {
+        fontSize: 22,
+        color: '#B2FFFF',
+        textAlign: 'center',
+    },
+    textLabel: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: '#002D62',
+    },
+    butoes:{
+        flexDirection: 'row',
+        height: 40,
+        justifyContent: 'center',
+        borderRadius: 10,
+        marginTop: 20,
+        gap: 25,
+    },
+});
 
-        botao: {
-            backgroundColor: 'darkslategrey',
-            width: '75%',
-            borderRadius: RFPercentage(2),
-            padding: RFPercentage(1),
-            alignItems: 'center',
-            justifyContent: 'center',
-            margin: RFPercentage(2),
-        },
-        txtBotao: {
-            fontSize:RFPercentage(2),
-            color: '#fafafa',
-        }
-    }
-);
 export default styles;
