@@ -1,10 +1,11 @@
 import { StyleSheet } from 'react-native';
+import { RFPercentage } from 'react-native-responsive-fontsize';
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        backgroundColor: '#007791 ',
+        backgroundColor: '#B9D9EB',
         padding: 8,
     },
     paragraph: {

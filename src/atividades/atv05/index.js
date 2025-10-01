@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
-export default function Exemplo05() {
+export default function Atividade5() {
     const [n1, setN1] = useState(0);
     const [n2, setN2] = useState(0);
     const [total, setTotal] = useState(0);
@@ -52,22 +52,22 @@ export default function Exemplo05() {
             <Text style={styles.txtEntrada}>{total}</Text>
 
             <View style={styles.butoes}>
-            <TouchableOpacity style={styles.button} onPress={Soma}>
-                <Text style={styles.txtButton}> + </Text>
-            </TouchableOpacity>
+                <TouchableOpacity style={styles.button} onPress={Soma}>
+                    <Text style={styles.txtButton}> + </Text>
+                </TouchableOpacity>
 
-            <TouchableOpacity style={styles.button} onPress={Sub}>
-                <Text style={styles.txtButton}> - </Text>
-            </TouchableOpacity> 
+                <TouchableOpacity style={styles.button} onPress={Sub}>
+                    <Text style={styles.txtButton}> - </Text>
+                </TouchableOpacity>
 
-            <TouchableOpacity style={styles.button} onPress={Div}>
-                <Text style={styles.txtButton}> / </Text>
-            </TouchableOpacity> 
+                <TouchableOpacity style={styles.button} onPress={Div}>
+                    <Text style={styles.txtButton}> / </Text>
+                </TouchableOpacity>
 
-            <TouchableOpacity style={styles.button} onPress={Mult}>
-                <Text style={styles.txtButton}> * </Text>
-                
-            </TouchableOpacity> 
+                <TouchableOpacity style={styles.button} onPress={Mult}>
+                    <Text style={styles.txtButton}> * </Text>
+
+                </TouchableOpacity>
             </View>
 
         </View>
