@@ -68,6 +68,7 @@ export default function Atividade5() {
                     <Text style={styles.txtButton}> * </Text>
 
                 </TouchableOpacity>
+                
             </View>
 
         </View>
